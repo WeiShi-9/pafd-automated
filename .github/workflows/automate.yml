@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-      - name: Sleepy
-        run: sleep ${RANDOM:0:2}m
+#       - name: Sleepy
+#         run: sleep ${RANDOM:0:2}m
   
       - name: Check out code
         uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
           pip install opencv-python==4.5.4.60
           pip install easyocr pillow numpy
           pip install cryptography==36.0.2
-          pip install pyOpenSSL==1.1.1
+          pip install pyOpenSSL
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
       - name: run
