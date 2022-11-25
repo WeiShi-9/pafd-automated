@@ -307,10 +307,10 @@ if __name__ == '__main__':
     # print(uid, psw)
 
     # check the web site not change 
-    pafd_js_digest = b'\x87\x15]\xdemq\x90\xcbi\x8e\x95\x1b\xc9\xdbu\x19Z\x94\xdfN\x80mN^\xb8R/\x99\x15\xaa6\x84\xe9\xb2\xcfK\xa2\xf1e\xdam\xc3\xefg\x11?j\x0e\xe80nM\xe5\xc5\x1d\\\x94T\x05}\x91tXZ'
-    res = requests.get("https://zlapp.fudan.edu.cn/site/static/js/143.e9ce02f4909e1fa02d1c.js?v=1666686432229")
-    a = hashlib.sha512(res.text.encode()).digest()
-    assert a == pafd_js_digest, "should be equal"
+#     pafd_js_digest = b'\x87\x15]\xdemq\x90\xcbi\x8e\x95\x1b\xc9\xdbu\x19Z\x94\xdfN\x80mN^\xb8R/\x99\x15\xaa6\x84\xe9\xb2\xcfK\xa2\xf1e\xdam\xc3\xefg\x11?j\x0e\xe80nM\xe5\xc5\x1d\\\x94T\x05}\x91tXZ'
+#     res = requests.get("https://zlapp.fudan.edu.cn/site/static/js/143.e9ce02f4909e1fa02d1c.js?v=1666686432229")
+#     a = hashlib.sha512(res.text.encode()).digest()
+#     assert a == pafd_js_digest, "should be equal"
 
     zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
                   'service=https://zlapp.fudan.edu.cn/site/ncov/fudanDaily'
